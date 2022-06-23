@@ -33,11 +33,11 @@ aside form {
 aside form div {
   padding-bottom: 1rem;
 }
-aside form div label:not(:last-child) {
-  display: block;
-}
 aside form div label {
   font-size: 1.5rem;
+}
+aside form div label:not(:last-child) {
+  display: block;
 }
 aside form div input[type=text] {
   width: 100%;
@@ -45,6 +45,14 @@ aside form div input[type=text] {
   border: 0;
   border-radius: 10px;
   background-color: #F0F3F8;
+}
+aside form div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+aside form div:nth-last-child(2) {
+  padding-bottom: 3rem;
 }
 
 main {

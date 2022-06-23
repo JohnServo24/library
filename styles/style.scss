@@ -39,17 +39,18 @@ aside {
     form {
         padding-top: 2rem;
         white-space: nowrap;
-        
+
         div {
             padding-bottom: 1rem;
+
+            label {
+                font-size: 1.5rem;
+            }
 
             label:not(:last-child) {
                 display: block;
             }
 
-            label {
-                font-size: 1.5rem;
-            }
             input[type=text] {
                 width: 100%;
                 font-size: 1.5rem;
@@ -57,6 +58,16 @@ aside {
                 border-radius: 10px;
                 background-color: $button-color;
             }
+        }
+
+        div:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        div:nth-last-child(2) {
+            padding-bottom: 3rem;
         }
     }
 }
