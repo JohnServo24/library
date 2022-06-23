@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+}
+
 main {
-
+    height: 100%;
     .grid {
-
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
         .card {
             border: 1px solid black;
         }
