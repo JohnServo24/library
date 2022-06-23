@@ -9,14 +9,14 @@ body {
 
 aside {
   height: 100%;
-  position: absolute;
-  width: 0;
+  width: 20vw;
   overflow-x: hidden;
   border: 1px solid black;
   transition: 1s;
 }
 
 main {
+  display: none;
   height: 100%;
 }
 main .grid {
