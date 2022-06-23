@@ -10,8 +10,10 @@ body {
 aside {
   height: 100%;
   position: absolute;
-  width: 20vw;
+  width: 0;
+  overflow-x: hidden;
   border: 1px solid black;
+  transition: 1s;
 }
 
 main {
