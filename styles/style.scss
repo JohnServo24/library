@@ -7,6 +7,13 @@ body {
     height: 100vh;
 }
 
+aside {
+    height: 100%;
+    position:absolute;
+    width: 20vw;
+    border: 1px solid black;
+}
+
 main {
     height: 100%;
     .grid {
