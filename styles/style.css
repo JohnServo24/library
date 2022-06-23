@@ -2,26 +2,54 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
+  display: flex;
 }
 
 aside {
   height: 100%;
-  width: 20vw;
   overflow-x: hidden;
-  border: 1px solid black;
+  width: 20vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 1s;
+  padding: 1rem;
+}
+aside button {
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #FF9F29;
+  color: #FAF3E3;
+}
+aside form {
+  padding-top: 2rem;
+  white-space: nowrap;
+}
+aside form div {
+  padding-bottom: 1rem;
+}
+aside form div label:not(:last-child) {
+  display: block;
 }
 aside form div label {
-  display: block;
+  font-size: 1.5rem;
+}
+aside form div input[type=text] {
+  width: 100%;
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 10px;
+  background-color: #F0F3F8;
 }
 
 main {
-  display: none;
   height: 100%;
+  filter: blur(0.2rem);
 }
 main .grid {
   display: grid;
