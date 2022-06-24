@@ -1,3 +1,12 @@
+@font-face {
+    font-family: gilroy-extrabold;
+    src: url("../assets/fonts/Gilroy-ExtraBold.orf");
+}
+@font-face {
+    font-family: gilroy-light;
+    src: url("../assets/fonts/Gilroy-Light.otf");
+}
+
 $main-color: #3584E4;
 $accent-color: #DFF6FF;
 $button-color: #F0F3F8;
@@ -7,7 +16,7 @@ $side-text-color: #8b8b8b;
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: gilroy-light;
     box-sizing: border-box;
 }
 
@@ -18,9 +27,10 @@ body {
 
 aside {
     height: 100%;
-    // position:absolute;
+    position:absolute;
     width: 0;
     padding: 0;
+    background-color: white;
     
     overflow-x: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,8 +39,9 @@ aside {
     white-space: nowrap;
 
     .exit {
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
-        padding: 1rem;
         font-size: 1rem;
         border: none;
         background-color: $main-color;
@@ -87,7 +98,6 @@ aside {
         }
 
         button[type=submit] {
-            white-space: nowrap;
             font-size: 1.3rem;
             padding: 0.5rem 1rem;
             border-radius: 5px;
@@ -101,7 +111,23 @@ aside {
 
 main {
     height: 100%;
+    width: 100%;
+    padding: 2rem;
 
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            color: $accent-color;
+            background-color: $main-color;
+        }
+    }
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

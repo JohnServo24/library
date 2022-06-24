@@ -1,7 +1,15 @@
+@font-face {
+  font-family: gilroy-extrabold;
+  src: url("../assets/fonts/Gilroy-ExtraBold.orf");
+}
+@font-face {
+  font-family: gilroy-light;
+  src: url("../assets/fonts/Gilroy-Light.otf");
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: gilroy-light;
   box-sizing: border-box;
 }
 
@@ -12,16 +20,19 @@ body {
 
 aside {
   height: 100%;
+  position: absolute;
   width: 0;
   padding: 0;
+  background-color: white;
   overflow-x: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 1s;
   white-space: nowrap;
 }
 aside .exit {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  padding: 1rem;
   font-size: 1rem;
   border: none;
   background-color: #3584E4;
@@ -69,7 +80,6 @@ aside form div:nth-last-child(2) {
   padding-bottom: 3rem;
 }
 aside form button[type=submit] {
-  white-space: nowrap;
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -80,6 +90,21 @@ aside form button[type=submit] {
 
 main {
   height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+main .top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .top button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  color: #DFF6FF;
+  background-color: #3584E4;
 }
 main .grid {
   display: grid;
