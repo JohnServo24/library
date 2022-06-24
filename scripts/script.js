@@ -17,7 +17,6 @@
 
 //--- TO ADD:
 // > Darken buttons on hover
-// > Form validation for number
 // > Checks if the book exists
 // > Fill out the library
 // > Store book locally
@@ -118,6 +117,16 @@ const checkbox = document.getElementById("checkbox");
 addBookToLibrary("The Great Gatsby", "F. Scott FItzgerald", "1", true);
 addBookToLibrary("1984", "George Orwell", "2", false);
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "2", true);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("1984", "George", "2", false);
+
 displayAll(myLibrary);
 
 // Form to add new books
