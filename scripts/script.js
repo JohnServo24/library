@@ -23,11 +23,11 @@ const addToPage = (title, author, pages, read) => {
 
     // Creates the card
     const card = document.createElement("div");
-    const text = document.createElement("text");
+    const text = document.createElement("div");
     const titleToAdd = document.createElement("p");
     const authorToAdd = document.createElement("p");
     const pagesToAdd = document.createElement("p");
-    const icons = document.createElement("icons");
+    const icons = document.createElement("div");
     const checkbox = document.createElement("input");
     const deleteButton = document.createElement("span");
 
