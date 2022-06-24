@@ -1,8 +1,4 @@
 @font-face {
-  font-family: gilroy-extrabold;
-  src: url("../assets/fonts/Gilroy-ExtraBold.orf");
-}
-@font-face {
   font-family: gilroy-light;
   src: url("../assets/fonts/Gilroy-Light.otf");
 }
@@ -24,16 +20,17 @@ aside {
   width: 0;
   padding: 0;
   background-color: white;
+  z-index: 1;
   overflow-x: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 1s;
   white-space: nowrap;
 }
 aside .exit {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: none;
   background-color: #3584E4;
   color: #DFF6FF;
@@ -92,19 +89,21 @@ main {
   height: 100%;
   width: 100%;
   padding: 2rem;
+  transition: 1s;
 }
 main .top {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 main .top button {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: none;
   color: #DFF6FF;
   background-color: #3584E4;
+  font-size: 1.5rem;
 }
 main .grid {
   display: grid;
