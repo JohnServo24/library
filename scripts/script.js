@@ -5,19 +5,20 @@
 
 let myLibrary = [];
 
-function Book(title, author, pages) {
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.read = read;
 }
 
-const addBookToLibrary = (title, author, pages) => {
-    const book = new Book(title, author, pages);
+const addBookToLibrary = (title, author, pages, read) => {
+    const book = new Book(title, author, pages, read);
 
     myLibrary.push(book);
 }
 
-const addToPage = (title, author, pages) => {
+const addToPage = (title, author, pages, read) => {
     const grid = document.getElementById("grid");
 
     // Creates the card
@@ -53,6 +54,8 @@ const addToPage = (title, author, pages) => {
     icons.append(checkbox);
     icons.append(deleteButton);
 }
+
+const displayAll = library => {for (const book in library) addToPage(book.title, book.author, book.pages, book.read)}
 
 const sidebar = document.getElementById("sidebar");
 const main = document.getElementById("main");
