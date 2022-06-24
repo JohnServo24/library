@@ -90,6 +90,7 @@ const cardCheckbox = main.querySelectorAll("input[type=checkbox]");
 
 addBookToLibrary("Harry Potter", "ASDAS", "2323", true);
 
+// Form to add new books
 form.addEventListener("submit", () => {
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
     addToPage(title.value, author.value, pages.value, read.checked);
@@ -107,10 +108,17 @@ form.addEventListener("submit", () => {
 
 // Toggles the checkbox on the library
 cardCheckbox.forEach(item => {
+    // EXPLANATION: Finding the title is one of the ways to get a specific book
+    // from the library since there are different books in the library,
+    // If two books have the same title then we just check for the author & pages
+    // but I haven't implemented it here
     item.addEventListener("change", () => {
+        // Finds the card title by "crawling out" of the current element 
+        // Then searching for it in its grandparent
         const itemGrandparent = item.parentElement.parentElement;
         const cardTitle = itemGrandparent.firstElementChild.firstElementChild.textContent;
 
+        // If a book matches the card title, toggle its read status
         myLibrary.forEach(book => {
             if (book.title === cardTitle) {
                 if(item.checked === true) {
@@ -118,8 +126,6 @@ cardCheckbox.forEach(item => {
                 } else book.read = false;
             };
         })
-
-        
     });
 });
 
