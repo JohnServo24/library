@@ -23,12 +23,12 @@ body {
 
 aside {
     height: 100%;
-    position:absolute;
+    position: absolute;
     width: 0;
     padding: 0;
     background-color: white;
     z-index: 1;
-    
+
     overflow-x: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -69,7 +69,7 @@ aside {
                 border-left: none;
                 border-right: none;
                 border-bottom: 4px solid $default-button-color;
-                
+
                 &:focus {
                     outline: none;
                     transition: 0.5s;
@@ -111,14 +111,12 @@ main {
     width: 100%;
     padding: 2rem;
 
-    transition: 1s;
-
     .top {
         display: flex;
         align-items: center;
         gap: 15px;
 
-        
+
         button {
             width: 25px;
             height: 25px;
@@ -129,10 +127,12 @@ main {
             font-size: 1.5rem;
         }
     }
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 10px;
+
         .card {
             border: 1px solid black;
         }
