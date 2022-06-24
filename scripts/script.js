@@ -15,6 +15,12 @@
     // Traverse the database for the book title
     // If book title matches, delete it
 
+//--- TO ADD:
+// > Cursor hover on delete
+// > Form validation for number
+// > Checks if the book exists
+// > Fill out the library
+// > Store book locally
 
 let myLibrary = [];
 
@@ -34,13 +40,6 @@ const addBookToLibrary = (title, author, pages, read) => {
 const addToPage = (title, author, pages, read) => {
     const grid = document.getElementById("grid");
 
-    // Identifies the position of the card in the library
-    // and uses it as the class for the card 
-    let cardNo = 0;
-    myLibrary.forEach((item, i) => {
-        if (item.title == title) cardNo = i;
-    });
-
     // Creates the card
     const card = document.createElement("div");
     const text = document.createElement("div");
@@ -53,7 +52,6 @@ const addToPage = (title, author, pages, read) => {
 
     // Adds the classes to card
     card.classList.add("card");
-    card.setAttribute("id", `card-${cardNo}`);
     text.classList.add("text");
     icons.classList.add("icons");
     checkbox.setAttribute("type", "checkbox");
