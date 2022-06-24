@@ -16,8 +16,8 @@
     // If book title matches, delete it
 
 //--- TO ADD:
-// > Checks if the book exists
-// > Store book locally
+// > Checks if the book exists (WILL ADD LATER BECAUSE I HAVENT LEARNED ASYNC/PROMISES YET)
+// > Store book locally (WILL DO LATER BECAUSE I HAVENT LEARNED JSON YET)
 
 let myLibrary = [];
 
@@ -124,6 +124,9 @@ addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "8", true);
 addBookToLibrary("A Christmas Carol ", "Charles Dickens", "9", false);
 addBookToLibrary("The Lord of the Ring", "J. R. R. Tolkien", "10", true);
 addBookToLibrary("Don Quixote", "Miguel de Cervantes", "11", false);
+addBookToLibrary("A Song of Ice and Fire", "George R. R. Martin", "5", false);
+addBookToLibrary("Moby-Dick", "Herman Melville", "5", true);
+addBookToLibrary("Ulysses", "James Joyce", "5", false);
 
 displayAll(myLibrary);
 
