@@ -16,9 +16,7 @@
     // If book title matches, delete it
 
 //--- TO ADD:
-// > Darken buttons on hover
 // > Checks if the book exists
-// > Fill out the library
 // > Store book locally
 
 let myLibrary = [];

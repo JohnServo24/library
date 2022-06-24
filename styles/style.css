@@ -18,6 +18,10 @@ body {
   display: flex;
 }
 
+button:hover {
+  filter: brightness(80%);
+}
+
 aside {
   height: 100%;
   width: 0;
@@ -36,8 +40,9 @@ aside .exit {
   border-radius: 50%;
   font-size: 1.2rem;
   border: none;
-  background-color: #DFF6FF;
-  color: #8b8b8b;
+  background-color: #3584E4;
+  color: #DFF6FF;
+  transition: 0.4s;
 }
 aside form {
   padding-top: 2rem;
@@ -87,6 +92,7 @@ aside form button[type=submit] {
   border: none;
   color: #DFF6FF;
   background-color: #3584E4;
+  transition: 0.4s;
 }
 
 main {
@@ -108,6 +114,7 @@ main .top button {
   color: #DFF6FF;
   background-color: #3584E4;
   font-size: 1.5rem;
+  transition: 0.4s;
 }
 main .grid {
   display: grid;

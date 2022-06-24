@@ -25,6 +25,9 @@ body {
     display: flex;
 }
 
+button:hover {
+    filter: brightness(80%)
+}
 aside {
     height: 100%;
     width: 0;
@@ -45,8 +48,9 @@ aside {
         border-radius: 50%;
         font-size: 1.2rem;
         border: none;
-        background-color: $accent-color;
-        color: $side-text-color;
+        background-color: $main-color;
+        color: $accent-color;
+        transition: 0.4s;
     }
 
     form {
@@ -105,7 +109,7 @@ aside {
             border: none;
             color: $accent-color;
             background-color: $main-color;
-
+            transition: 0.4s;
         }
     }
 }
@@ -130,6 +134,7 @@ main {
             color: $accent-color;
             background-color: $main-color;
             font-size: 1.5rem;
+            transition: 0.4s;
         }
     }
 
