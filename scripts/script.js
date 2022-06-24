@@ -43,6 +43,7 @@ const addToPage = (title, author, pages, read) => {
     authorToAdd.textContent = author;
     pagesToAdd.textContent = pages;
     deleteButton.textContent = "delete";
+    checkbox.checked = read;
 
     // Appends everything
     grid.append(card);
@@ -55,7 +56,15 @@ const addToPage = (title, author, pages, read) => {
     icons.append(deleteButton);
 }
 
-const displayAll = library => {for (const book in library) addToPage(book.title, book.author, book.pages, book.read)}
+// Clear all items, to be used with displayAll if we want to display something
+// on the screen. Without this, the previous items will still be on the DOM
+const clearAll = () => {
+    const grid = document.getElementById("grid");
+
+    while(grid.firstChild) grid.removeChild(grid.firstChild);
+}
+
+const displayAll = library => {for (const book in library) addToPage(book.title, book.author, book.pages, book.read)};
 
 const sidebar = document.getElementById("sidebar");
 const main = document.getElementById("main");
@@ -68,14 +77,20 @@ const author = document.getElementById("author");
 const pages = document.getElementById("pages");
 const checkbox = document.getElementById("checkbox");
 
+
 form.addEventListener("submit", () => {
-    addBookToLibrary(title.value, author.value, pages.value);
-    addToPage(title.value, author.value, pages.value);
+    addBookToLibrary(title.value, author.value, pages.value, read.checked);
+    addToPage(title.value, author.value, pages.value, read.checked);
 
     sidebar.style.width = "0";
     sidebar.style.padding = "0";
     main.style.transition = "0";
     main.style.filter = "blur(0)";
+
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = false;
 });
 
 
