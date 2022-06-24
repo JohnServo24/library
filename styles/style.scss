@@ -153,6 +153,10 @@ main {
                     width: 20px;
                     height: 20px;
                 }
+
+                span:hover {
+                    cursor: default;
+                }
             }
 
             .text {

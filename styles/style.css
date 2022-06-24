@@ -129,6 +129,9 @@ main .grid .card .icons input[type=checkbox] {
   width: 20px;
   height: 20px;
 }
+main .grid .card .icons span:hover {
+  cursor: default;
+}
 main .grid .card .text {
   padding-bottom: 1rem;
 }
