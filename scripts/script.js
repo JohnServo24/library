@@ -2,6 +2,12 @@
 // Store book into library
 // Output the book
 
+// -- If user checks/unchecks on screen it should also reflect on the library array
+// Listen to the checkboxes
+// If one of them is toggled, transfer to parent element and get the title
+// Traverse through the list finding that title
+// Toggle the read to either true or false
+
 
 let myLibrary = [];
 
@@ -61,22 +67,28 @@ const addToPage = (title, author, pages, read) => {
 const clearAll = () => {
     const grid = document.getElementById("grid");
 
-    while(grid.firstChild) grid.removeChild(grid.firstChild);
+    while (grid.firstChild) grid.removeChild(grid.firstChild);
 }
 
-const displayAll = library => {for (const book in library) addToPage(book.title, book.author, book.pages, book.read)};
+const displayAll = library => { for (const book in library) addToPage(book.title, book.author, book.pages, book.read) };
 
+// Selects all sections
 const sidebar = document.getElementById("sidebar");
 const main = document.getElementById("main");
 const addBookButton = document.getElementById("addBookButton");
 const close = document.getElementById("close");
 
+// Selects all form elements
 const form = document.getElementById("form");
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const pages = document.getElementById("pages");
 const checkbox = document.getElementById("checkbox");
 
+// Selects all checkboxes
+const cardCheckbox = main.querySelectorAll("input[type=checkbox]");
+
+addBookToLibrary("Harry Potter", "ASDAS", "2323", true);
 
 form.addEventListener("submit", () => {
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
@@ -93,6 +105,23 @@ form.addEventListener("submit", () => {
     read.checked = false;
 });
 
+// Toggles the checkbox on the library
+cardCheckbox.forEach(item => {
+    item.addEventListener("change", () => {
+        const itemGrandparent = item.parentElement.parentElement;
+        const cardTitle = itemGrandparent.firstElementChild.firstElementChild.textContent;
+
+        myLibrary.forEach(book => {
+            if (book.title === cardTitle) {
+                if(item.checked === true) {
+                    book.read = true;
+                } else book.read = false;
+            };
+        })
+
+        
+    });
+});
 
 // Page effects
 
@@ -111,6 +140,7 @@ close.addEventListener('click', () => {
 });
 
 
+// test.parentElement.parentElement.querySelector("#testtest").firstElementChild.textContent
 
 
 
