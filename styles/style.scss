@@ -1,6 +1,8 @@
-$main-color: #FF9F29;
-$accent-color: #FAF3E3;
+$main-color: #3584E4;
+$accent-color: #DFF6FF;
 $button-color: #F0F3F8;
+$default-button-color: #e7e7e7;
+$side-text-color: #8b8b8b;
 
 * {
     margin: 0;
@@ -17,17 +19,16 @@ body {
 aside {
     height: 100%;
     // position:absolute;
-    // width: 0;
-    // padding-left: 0;
+    width: 0;
+    padding: 0;
     
     overflow-x: hidden;
-    width: 20vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     transition: 1s;
-    padding: 1rem;
+    white-space: nowrap;
 
-    button {
+    .exit {
         border-radius: 50%;
         padding: 1rem;
         font-size: 1rem;
@@ -38,13 +39,15 @@ aside {
 
     form {
         padding-top: 2rem;
-        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
 
         div {
             padding-bottom: 1rem;
 
             label {
                 font-size: 1.5rem;
+                color: $side-text-color;
             }
 
             label:not(:last-child) {
@@ -54,9 +57,22 @@ aside {
             input[type=text] {
                 width: 100%;
                 font-size: 1.5rem;
-                border: 0;
-                border-radius: 10px;
-                background-color: $button-color;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 4px solid $default-button-color;
+                
+                &:focus {
+                    outline: none;
+                    transition: 0.5s;
+                    background-color: $default-button-color;
+                    border-radius: 5px;
+                }
+            }
+
+            input[type=checkbox] {
+                height: 22px;
+                width: 22px;
             }
         }
 
@@ -69,12 +85,23 @@ aside {
         div:nth-last-child(2) {
             padding-bottom: 3rem;
         }
+
+        button[type=submit] {
+            white-space: nowrap;
+            font-size: 1.3rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            color: $accent-color;
+            background-color: $main-color;
+
+        }
     }
 }
 
 main {
     height: 100%;
-    filter: blur(0.2rem);
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

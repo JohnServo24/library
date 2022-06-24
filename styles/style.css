@@ -12,29 +12,32 @@ body {
 
 aside {
   height: 100%;
+  width: 0;
+  padding: 0;
   overflow-x: hidden;
-  width: 20vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 1s;
-  padding: 1rem;
+  white-space: nowrap;
 }
-aside button {
+aside .exit {
   border-radius: 50%;
   padding: 1rem;
   font-size: 1rem;
   border: none;
-  background-color: #FF9F29;
-  color: #FAF3E3;
+  background-color: #3584E4;
+  color: #DFF6FF;
 }
 aside form {
   padding-top: 2rem;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
 }
 aside form div {
   padding-bottom: 1rem;
 }
 aside form div label {
   font-size: 1.5rem;
+  color: #8b8b8b;
 }
 aside form div label:not(:last-child) {
   display: block;
@@ -42,9 +45,20 @@ aside form div label:not(:last-child) {
 aside form div input[type=text] {
   width: 100%;
   font-size: 1.5rem;
-  border: 0;
-  border-radius: 10px;
-  background-color: #F0F3F8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #e7e7e7;
+}
+aside form div input[type=text]:focus {
+  outline: none;
+  transition: 0.5s;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+}
+aside form div input[type=checkbox] {
+  height: 22px;
+  width: 22px;
 }
 aside form div:last-child {
   display: flex;
@@ -54,10 +68,18 @@ aside form div:last-child {
 aside form div:nth-last-child(2) {
   padding-bottom: 3rem;
 }
+aside form button[type=submit] {
+  white-space: nowrap;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  color: #DFF6FF;
+  background-color: #3584E4;
+}
 
 main {
   height: 100%;
-  filter: blur(0.2rem);
 }
 main .grid {
   display: grid;
