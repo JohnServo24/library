@@ -11,6 +11,9 @@
 // -- If user wants to delete
 // Listen to the delete button
 // If clicked, delete the book where the delete button is in
+// Then delete the book from the database
+    // Traverse the database for the book title
+    // If book title matches, delete it
 
 
 let myLibrary = [];
@@ -135,11 +138,14 @@ form.addEventListener("submit", () => {
 });
 
 grid.addEventListener("click", e => {
+
+    // Gets the book title (if the checkbox or delete is tapped)
     const target = e.target;
     const itemGrandparent = target.parentElement.parentElement;
     const cardTitle = itemGrandparent.firstElementChild.firstElementChild.textContent;
 
     if (target.type === 'checkbox') {
+        // Finds the book name in the list and toggles it
         myLibrary.forEach(book => {
             if (book.title === cardTitle) {
                 if (target.checked === true) {
@@ -148,50 +154,21 @@ grid.addEventListener("click", e => {
             };
         })
     } else if(target.className === 'material-symbols-outlined') {
-        // Removes item from book
+        // Finds the book name in the list and removes it
         myLibrary.forEach(book => {
             if (book.title === cardTitle) {
                 myLibrary = myLibrary.filter(item => item.title != book.title);
             };
         })
 
+        // Removes the book in the DOM
         grid.removeChild(itemGrandparent);
     }
 });
 
-// // Toggles the checkbox on the library
-// cardCheckbox.forEach(item => {
-//     // EXPLANATION: Finding the title is one of the ways to get a specific book
-//     // from the library since there are different books in the library,
-//     // If two books have the same title then we just check for the author & pages
-//     // but I haven't implemented it here
-//     item.addEventListener("change", () => {
-//         // Finds the card title by "crawling out" of the current element 
-//         // Then searching for it in its grandparent
-//         const itemGrandparent = item.parentElement.parentElement;
-//         const cardTitle = itemGrandparent.firstElementChild.firstElementChild.textContent;
-
-//         // If a book matches the card title, toggle its read status
-//         myLibrary.forEach(book => {
-//             if (book.title === cardTitle) {
-//                 if(item.checked === true) {
-//                     book.read = true;
-//                 } else book.read = false;
-//             };
-//         })
-//     });
-// });
-
-// deleteIcon.forEach(item => {
-//     item.addEventListener("click", () => {
-//         console.log("yeah");
-//     });
-// });
-
 // Page effects
 
 addBookButton.addEventListener('click', openSidebar);
-
 close.addEventListener('click', clearSidebar);
 
 
