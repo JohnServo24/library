@@ -59,7 +59,7 @@ const addToPage = (title, author, pages, read) => {
     // Adds the content to card
     titleToAdd.textContent = title;
     authorToAdd.textContent = author;
-    pagesToAdd.textContent = pages;
+    pagesToAdd.textContent = `${pages} pages`;
     deleteButton.textContent = "delete";
     checkbox.checked = read;
 
@@ -117,15 +117,15 @@ const checkbox = document.getElementById("checkbox");
 addBookToLibrary("The Great Gatsby", "F. Scott FItzgerald", "1", true);
 addBookToLibrary("1984", "George Orwell", "2", false);
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "2", true);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
-addBookToLibrary("1984", "George", "2", false);
+addBookToLibrary("The Alchemist", "Paulo Coelho", "3", false);
+addBookToLibrary("Beloved", "Toni Morrison", "4", false);
+addBookToLibrary("Breakfast at Tiffany's ", "Truman Capote", "5", false);
+addBookToLibrary("A Brief History of Time", "Stephen Hawking", "6", false);
+addBookToLibrary("The Call of the Wild ", "Jack London", "7", false);
+addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "8", false);
+addBookToLibrary("A Christmas Carol ", "Charles Dickens", "9", false);
+addBookToLibrary("The Lord of the Ring", "J. R. R. Tolkien", "10", false);
+addBookToLibrary("Don Quixote", "Miguel de Cervantes", "11", false);
 
 displayAll(myLibrary);
 
