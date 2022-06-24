@@ -1,4 +1,24 @@
 
+
+
+let myLibrary = [];
+
+function Book(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+}
+
+const addBookToLibrary = (title, author, pages) => {
+    const book = new Book(title, author, pages);
+
+    myLibrary.push(book);
+}
+
+const displayToPage = library => {
+    
+}
+
 const sidebar = document.getElementById("sidebar");
 const main = document.getElementById("main");
 const addBookButton = document.getElementById("addBookButton");
