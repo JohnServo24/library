@@ -2,6 +2,10 @@
   font-family: gilroy-light;
   src: url("../assets/fonts/Gilroy-Light.otf");
 }
+@font-face {
+  font-family: gilroy-extrabold;
+  src: url("../assets/fonts/Gilroy-ExtraBold.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,8 +36,8 @@ aside .exit {
   border-radius: 50%;
   font-size: 1.2rem;
   border: none;
-  background-color: #3584E4;
-  color: #DFF6FF;
+  background-color: #DFF6FF;
+  color: #8b8b8b;
 }
 aside form {
   padding-top: 2rem;
@@ -94,6 +98,7 @@ main .top {
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-bottom: 2rem;
 }
 main .top button {
   width: 25px;
@@ -110,5 +115,24 @@ main .grid {
   gap: 10px;
 }
 main .grid .card {
-  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 8px solid #3584E4;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+main .grid .card .icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .grid .card .icons input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+main .grid .card .text {
+  padding-bottom: 1rem;
+}
+main .grid .card .text :first-child {
+  font-size: 1.5rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

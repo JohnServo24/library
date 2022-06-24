@@ -2,6 +2,10 @@
     font-family: gilroy-light;
     src: url("../assets/fonts/Gilroy-Light.otf");
 }
+@font-face {
+    font-family: gilroy-extrabold;
+    src: url("../assets/fonts/Gilroy-ExtraBold.otf");
+}
 
 $main-color: #3584E4;
 $accent-color: #DFF6FF;
@@ -41,8 +45,8 @@ aside {
         border-radius: 50%;
         font-size: 1.2rem;
         border: none;
-        background-color: $main-color;
-        color: $accent-color;
+        background-color: $accent-color;
+        color: $side-text-color;
     }
 
     form {
@@ -115,6 +119,7 @@ main {
         display: flex;
         align-items: center;
         gap: 15px;
+        padding-bottom: 2rem;
 
 
         button {
@@ -134,7 +139,30 @@ main {
         gap: 10px;
 
         .card {
-            border: 1px solid black;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 8px solid $main-color;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            .icons {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                input[type=checkbox] {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .text {
+                padding-bottom: 1rem;
+                :first-child {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+            
         }
     }
 }
