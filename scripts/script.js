@@ -70,7 +70,7 @@ const clearAll = () => {
     while (grid.firstChild) grid.removeChild(grid.firstChild);
 }
 
-const displayAll = library => { for (const book in library) addToPage(book.title, book.author, book.pages, book.read) };
+const displayAll = library => { library.forEach(book => addToPage(book.title, book.author, book.pages, book.read)) };
 
 // Selects all sections
 const sidebar = document.getElementById("sidebar");
@@ -88,7 +88,11 @@ const checkbox = document.getElementById("checkbox");
 // Selects all checkboxes
 const cardCheckbox = main.querySelectorAll("input[type=checkbox]");
 
-addBookToLibrary("Harry Potter", "ASDAS", "2323", true);
+// Sample books
+addBookToLibrary("The Great Gatsby", "F. Scott FItzgerald", "1", true);
+addBookToLibrary("1984", "George Orwell", "2", false);
+addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "2", true);
+displayAll(myLibrary);
 
 // Form to add new books
 form.addEventListener("submit", () => {
