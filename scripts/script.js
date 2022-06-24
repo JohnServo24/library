@@ -118,13 +118,13 @@ addBookToLibrary("The Great Gatsby", "F. Scott FItzgerald", "1", true);
 addBookToLibrary("1984", "George Orwell", "2", false);
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", "2", true);
 addBookToLibrary("The Alchemist", "Paulo Coelho", "3", false);
-addBookToLibrary("Beloved", "Toni Morrison", "4", false);
+addBookToLibrary("Beloved", "Toni Morrison", "4", true);
 addBookToLibrary("Breakfast at Tiffany's ", "Truman Capote", "5", false);
-addBookToLibrary("A Brief History of Time", "Stephen Hawking", "6", false);
-addBookToLibrary("The Call of the Wild ", "Jack London", "7", false);
-addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "8", false);
+addBookToLibrary("A Brief History of Time", "Stephen Hawking", "6", true);
+addBookToLibrary("The Call of the Wild ", "Jack London", "7", true);
+addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "8", true);
 addBookToLibrary("A Christmas Carol ", "Charles Dickens", "9", false);
-addBookToLibrary("The Lord of the Ring", "J. R. R. Tolkien", "10", false);
+addBookToLibrary("The Lord of the Ring", "J. R. R. Tolkien", "10", true);
 addBookToLibrary("Don Quixote", "Miguel de Cervantes", "11", false);
 
 displayAll(myLibrary);
