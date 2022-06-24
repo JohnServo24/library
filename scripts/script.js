@@ -16,7 +16,7 @@
     // If book title matches, delete it
 
 //--- TO ADD:
-// > Cursor hover on delete
+// > Darken buttons on hover
 // > Form validation for number
 // > Checks if the book exists
 // > Fill out the library
