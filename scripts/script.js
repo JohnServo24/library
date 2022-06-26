@@ -120,7 +120,7 @@ addBookToLibrary("A Brief History of Time", "Stephen Hawking", "6", true);
 addBookToLibrary("The Call of the Wild ", "Jack London", "7", true);
 addBookToLibrary("The Catcher in the Rye", "J.D. Salinger", "8", true);
 addBookToLibrary("A Christmas Carol ", "Charles Dickens", "9", false);
-addBookToLibrary("The Lord of the Ring", "J. R. R. Tolkien", "10", true);
+addBookToLibrary("The Lord of the Rings", "J. R. R. Tolkien", "10", true);
 addBookToLibrary("Don Quixote", "Miguel de Cervantes", "11", false);
 addBookToLibrary("A Song of Ice and Fire", "George R. R. Martin", "5", false);
 addBookToLibrary("Moby-Dick", "Herman Melville", "5", true);
