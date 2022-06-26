@@ -12,16 +12,18 @@
 // Listen to the delete button
 // If clicked, delete the book where the delete button is in
 // Then delete the book from the database
-    // Traverse the database for the book title
-    // If book title matches, delete it
+// Traverse the database for the book title
+// If book title matches, delete it
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 const addBookToLibrary = (title, author, pages, read) => {
@@ -157,7 +159,7 @@ grid.addEventListener("click", e => {
                 } else book.read = false;
             };
         })
-    } else if(target.className === 'material-symbols-outlined') {
+    } else if (target.className === 'material-symbols-outlined') {
         // Finds the book name in the list and removes it
         myLibrary.forEach(book => {
             if (book.title === cardTitle) {
